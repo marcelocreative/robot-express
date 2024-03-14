@@ -5,12 +5,14 @@ Library                            Browser
 Resource                           ../env.resource
 
 *** Keywords ***
+
 Go to signup page 
     Go To                          ${URL_BASE}/signup
 
     #Checkpoins
     Wait For Elements State        css=h1              visible               5
     Get Text                       css=h1              equal                 Faça seu cadastro
+
 Submit signup form
     [Arguments]                    ${user}
      
@@ -25,3 +27,8 @@ Notice should be
     ${element}                     Set Variable        css=.notice p
     Wait For Elements State        ${element}          visible               5
     Get Text                       ${element}          equal                 ${expected_text}
+
+Alert should be
+    [Arguments]                    ${expected_test}
+
+    Wait For Elements State        css=.alert-error >> text=${expected_test}       visible        5
