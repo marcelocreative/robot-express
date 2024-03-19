@@ -1,0 +1,14 @@
+{
+    "create":{
+        "user":{
+            "name":"Jônatas Bastos",
+            "email":"jonatasbastos@yahoo.com",
+            "password":"abcdef"
+
+        },
+        "task":{
+            "name":"Criar uma nova versão do Ipode",
+            "tags":["ios", "music", "ipod"]
+        }
+    }
+}

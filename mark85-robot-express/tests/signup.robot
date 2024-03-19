@@ -61,40 +61,21 @@ Não deve cadastrar com email incorreto
 
     Alert should be                 Digite um e-mail válido
 
-Não deve cadastrar com senha de 1 dígito
-    [Tags]                          short_pass
-    [Template]                      
-    Short password                  1
+Não deve cadastrar com senha muito curta
+    [Tags]                          temp
 
-Não deve cadastrar com senha de 2 dígitos
-    [Tags]                          short_pass
-    [Template]                      
-    Short password                  12
+    @{list_password}                Create List    1    12    123    1234    12345
 
-Não deve cadastrar com senha de 3 dígitos
-    [Tags]                          short_pass
-    [Template]                      
-    Short password                  123
+    FOR    ${password}    IN    @{list_password}
 
-Não deve cadastrar com senha de 4 dígitos
-    [Tags]                          short_pass
-    [Template]                      
-    Short password                  1234
+        ${user}        Create Dictionary    
+        ...    name= Ayrton Senna
+        ...    email=ayrtonsenna@msn.com
+        ...    password=${password}
+        
+        Go to signup page
+        Submit signup form        ${user}
+        
+        Alert should be           Informe uma senha com pelo menos 6 digitos
 
-Não deve cadastrar com senha de 5 dígitos
-    [Tags]                          short_pass
-    [Template]                      
-    Short password                  12345
-
-*** Keywords ***
-Short password
-    [Arguments]                      ${shor_pass}
-    ${user}                          Create Dictionary    
-    ...                             name=Paolo Rossi
-    ...                             email=paulorossi@gmail.com
-    ...                             password=${shor_pass}
-    
-    Go to signup page
-    Submit signup form              ${user}
-
-    Alert should be                 Informe uma senha com pelo menos 6 digitos
+    END
