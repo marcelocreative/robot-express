@@ -10,5 +10,53 @@
             "name":"Criar uma nova versão do Ipode",
             "tags":["ios", "music", "ipod"]
         }
+    },
+    "duplicate":{
+        "user":{
+            "name":"Ayrton Senna",
+            "email":"ayrton.senna@gmail.com",
+            "password":"123456"
+
+        },
+        "task":{
+            "name":"Treinar no sábado",
+            "tags":[]
+        }
+    },
+    "tags_limit":{
+        "user":{
+            "name":"Jão da Silva",
+            "email":"jao@hotmail.com",
+            "password":"pwd123"
+
+        },
+        "task":{
+            "name":"Características de Renata",
+            "tags":["chata", "fofoqueira", "fala muito", "chalera o Gugu"]
+        }
+    },
+    "done":{
+        "user":{
+            "name":"Heleno Cesário de Barros",
+            "email":"helenocbarros@hotmail.com",
+            "password":"pwd123"
+
+        },
+        "task":{
+            "name":"Implementar projeto da arquiteta Rafaela",
+            "tags":["armário de cozinha", "guarda roupas", "mesa de sala"]
+        }
+    },
+    "delete":{
+        "user":{
+            "name":"Marcelo de Oliveira",
+            "email":"marcelo@gmail.com",
+            "password":"pwd123"
+
+        },
+        "task":{
+            "name":"Implementar planilhas financeiras",
+            "tags":["planilha de abril", "planilha de maio"]
+        }
     }
 }

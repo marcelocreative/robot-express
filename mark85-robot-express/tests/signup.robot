@@ -8,10 +8,11 @@ Test Teardown                     Take Screenshot
 
 *** Test Cases ***
 Deve poder cadastrar novo usuário
+
     ${user}                        Create Dictionary    
     ...                            name=Marcelo de Oliveira
     ...                            email=marcelo@gmail.com
-    ...                            password=123456    
+    ...                            password=123456
     
     Remove user from database      ${user}[email]
 

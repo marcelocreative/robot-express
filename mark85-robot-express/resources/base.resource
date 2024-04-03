@@ -5,6 +5,7 @@ Library                            libs/databse.py
 Library                            JSONLibrary
 
 Resource                           env.resource
+Resource                           services.resource
 Resource                           pages/SignupPage.resource
 Resource                           pages/LoginPage.resource
 Resource                           pages/TaskCreatePage.resource

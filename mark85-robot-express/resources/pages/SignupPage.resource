@@ -20,3 +20,9 @@ Submit signup form
     Fill Text                      css=input[name=email]                     ${user}[email]
     Fill Text                      css=input[name=password]                  ${user}[password]
     Click                          css=button[type=submit] >> text=Cadastrar
+
+Não deve logar com senha inválida
+    ${user}                          Create Dictionary    
+    ...    name=Gaspar Kundera
+    ...    email=gkundera@gmail.com
+    ...    password=g12345
