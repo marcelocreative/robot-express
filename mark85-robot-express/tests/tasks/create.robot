@@ -10,14 +10,10 @@ Deve poder cadastrar uma nova tarefa
 
     ${data}                         Get fixture                            tasks                create
 
-    Clean user from database        ${data}[user][email]
-    Insert user from database       ${data}[user]
-
-    Submit login form               ${data}[user]
-    User should be logged in        ${data}[user][name]
+    Reset user from database        ${data}[user]
+    Do login                        ${data}[user]
 
     Go to task form
-
     Submit task form                ${data}[task]
 
     Task should be registered       ${data}[task][name]
@@ -26,14 +22,9 @@ Não deve cadastrar tarefa com nome duplicado
     [Tags]                           dup
     ${data}                          Get fixture                           tasks                 duplicate
 
-    Remove user from database        ${data}[user][email]
-    Insert user from database        ${data}[user]
-
-    Submit login form                ${data}[user]
-    User should be logged in         ${data}[user][name]
-
-    POST user session                ${data}[user]
-    POST a new task                  ${data}[task]
+    Reset user from database        ${data}[user]
+    Do login                        ${data}[user]
+    Create a new task from API       ${data}
 
     Go to task form
     Submit task form                 ${data}[task]
@@ -44,11 +35,8 @@ Não deve cadastrar uma nova tarefa quando atinge limite de tags
     [Tags]                           tags_limit
     ${data}                          Get fixture                           tasks                 tags_limit
 
-    Remove user from database        ${data}[user][email]
-    Insert user from database        ${data}[user]
-
-    Submit login form                ${data}[user]
-    User should be logged in         ${data}[user][name]
+    Reset user from database        ${data}[user]
+    Do login                        ${data}[user]
 
     Go to task form
     Submit task form                 ${data}[task]

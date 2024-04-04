@@ -10,14 +10,10 @@ Test Teardown        Take Screenshot
 Deve poder apagar uma tarefa indesejada
     ${data}        Get fixture        tasks        delete
 
-    Remove user from database        ${data}[user][email]
-    Insert user from database        ${data}[user]
+    Reset user from database        ${data}[user]
+    Create a new task from API       ${data}
 
-    POST user session                ${data}[user]
-    POST a new task                  ${data}[task]
-
-    Submit login form                ${data}[user]
-    User should be logged in         ${data}[user][name]
+    Do login                        ${data}[user]
 
     Request removal                  ${data}[task][name]
     Task should not exist            ${data}[task][name]
