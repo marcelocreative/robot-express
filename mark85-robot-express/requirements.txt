@@ -1,0 +1,8 @@
+bcrypt==4.1.2
+pymongo==4.6.2
+requests==2.31.0
+robotframework==7.0
+robotframework-browser==18.2.0
+robotframework-jsonlibrary==0.5
+robotframework-pabot==2.16.0
+robotframework-requests==0.9.6
